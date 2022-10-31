@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+Mahyaddin Jabbarli, mj21068
+-->
+<html xmlns:color="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>COVID-19 Statistics</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="data.js"></script>
+        <script src="homework3.js"></script>
+        <style>
+            table, td, th { border: 1px solid gray; border-collapse: collapse;}
+            td:nth-child(5), td:nth-child(6), td:nth-child(7) {text-align: right;}
+        </style>
+    </head>
+    <body>
+        <h1>COVID-19 Statistics</h1>
+        <div id="error"></div>
+        <div>
+          <div>
+            <label for="continent-select">Continent:</label>
+            <select id="continent-select">
+				<option value="All" selected>All</option>
+			</select>
+          </div>
+          <div>
+            <label for="country-select">Country:</label>
+            <select id="country-select">
+			</select>
+          </div>
+          <div>
+            <label for="year-from">Year from:</label>      
+            <input type="text" id="year-from" placeholder="YYYY" min="2020" max="2021" required>
+          </div>    
+          <div>
+            <label for="week-from">Week from:</label>      
+            <input type="text" id="week-from" placeholder="Week number" min="1" max="52" required>
+          </div>    
+          <div>
+            <label for="year-till">Year till:</label>      
+            <input type="text" id="year-till" placeholder="YYYY" min="2020" max="2021" required>
+          </div>    
+          <div>
+            <label for="week-till">Week till:</label>      
+            <input type="text" id="week-till" placeholder="Week number" min="1" max="52" required>
+          </div>    
+          <div>
+            <label for="cases">Cases</label>      
+            <input type="radio" id="cases" name="indicator" value="cases" checked>
+            <label for="deaths">Deaths</label>      
+            <input type="radio" id="deaths" name="indicator" value="deaths">
+          </div>    
+          <div>
+            <label for="search">Country search:</label>      
+            <input type="search" id="search">
+          </div>
+          <div id="buttons">
+            <button id="show-list">Show list</button>
+          </div>
+		</div>
+		<table id = "table">
+            <tr>
+              <th>Country</th>
+              <th>Population</th>
+              <th>Week</th>
+              <th id="indicator">Cases weekly</th>
+              <th id="indicator_cumulative">Cumulative count</th>
+            </tr>
+	  </table>
+    </body>
+</html>
